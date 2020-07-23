@@ -7,7 +7,7 @@ class App extends React.Component {
         return (
             <div>
                 <BookCard book={this.props.book} />
-                {/*<AuthorCard book={this.props.book} />*/}
+                <AuthorCard book={this.props.book} />
             </div>
         );
     }
