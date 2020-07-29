@@ -8,6 +8,9 @@ class App extends React.Component {
             <div>
                 <BookCard book={this.props.book} />
                 <AuthorCard book={this.props.book} />
+                <div>
+                    <button>Подписаться</button>
+                </div>
             </div>
         );
     }
