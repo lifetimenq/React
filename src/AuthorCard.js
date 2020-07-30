@@ -2,6 +2,10 @@ import React from 'react';
 
 class AuthorCard extends React.Component {
     render() {
+        if (!this.props.book) {
+            return <div>Empty Author</div>;
+        }
+
         const { book : {
             Author: {
                 Name,
@@ -17,9 +21,9 @@ class AuthorCard extends React.Component {
                     <img style={styles.image} src={Avatar} alt={Name} />
                 </div>
                 <div style={styles.cardBody}>
-                    <div style={styles.title}>Имя: {Name}</div>
+                    <div style={styles.title}>{Name}</div>
                     <div>e-mail: {Email}</div>
-                    <div>Информация об авторе: {Info}</div>
+                    <div>Информация об авторе: <span>{Info}</span></div>
                 </div>
             </div>
         );
