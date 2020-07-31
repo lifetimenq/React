@@ -2,6 +2,10 @@ import React from 'react';
 
 class BookCard extends React.Component {
     render() {
+        if (!this.props.book) {
+            return <div>Empty Book</div>;
+        }
+
         const {
             book: {
                 Title,
@@ -24,7 +28,7 @@ class BookCard extends React.Component {
                     <img style={styles.image} src={Cover} alt={Title} />
                 </div>
                 <div style={styles.cardBody}>
-                    <div style={styles.title}>Название: {Title}</div>
+                    <div style={styles.title}>{Title}</div>
                     <div>Краткое описание: {Description}</div>
                     <div>Количество страниц: {NumbersOfPage}</div>
                     <div>Язык: {Language}</div>
@@ -33,7 +37,7 @@ class BookCard extends React.Component {
                     <div>Минимальная цена: {MinimumPrice} руб.</div>
                     <div>Желаемая цена: {SuggestedPrice} руб.</div>
                     <div>Собранная сумма: {CollectedAmount} руб.</div>
-                    <div>Ожидаемая сумма: {ExpectedAmount} руб.</div>
+                    <div>Ожидаемая сумма: <span>{ExpectedAmount}</span> руб.</div>
                 </div>
             </div>
         );
