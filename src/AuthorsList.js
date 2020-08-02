@@ -4,7 +4,6 @@ import AuthorCard from './AuthorCard';
 
 class AuthorsList extends React.Component {
   render() {
-    console.log(this);
     return (
       <div>
         {

@@ -9,12 +9,10 @@ class BookCard extends React.Component {
     this.state = { allAuthorsShow: false };
   }
   toggleAllAuthorsShow() {
-    console.log(this);
     this.setState({ allAuthorsShow: !this.state.allAuthorsShow});
   }
 
   render() {
-    
     if (!this.props.book) {
       return <div>Empty Book</div>;
     }
@@ -31,16 +29,21 @@ class BookCard extends React.Component {
         SuggestedPrice,
         CollectedAmount,
         ExpectedAmount,
+        Subscribers,
         Authors
       }
     } = this.props;
-    console.log(Authors);
+
     return (
       <div style={styles.container}>
         <div style={styles.imageBox}>
           <img style={styles.image} src={Cover} alt={Title} />
         </div>
         <div style={styles.cardBody}>
+          {
+            Subscribers > 20 &&
+            <div>Популярная книга</div>
+          }
           <div style={styles.title}>{Title}</div>
           <div>Краткое описание: {Description}</div>
           <div>Количество страниц: {NumbersOfPage}</div>
