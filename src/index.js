@@ -3,6 +3,8 @@ import React from 'react';
 
 import App from "./App";
 
+import './index.css';
+
 const book = {
     'Title': 'How to earn more than 1 million',
     'Description': 'Just invent antigravity reactor',
