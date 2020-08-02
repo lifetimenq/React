@@ -1,17 +1,21 @@
 import React from 'react';
 
 import BookCard from './BookCard';
+import SubscribeModal from './SubscribeModal';
 
 class BooksList extends React.Component {
   render() {
     return (
-      <div>
-        {this.props.books.map(book => (
-          <div key={book.Id}>
-            <BookCard book={book} />
-          </div>
-        ))}
-      </div>
+      <>
+        <SubscribeModal />
+        <div>
+          {this.props.books.map(book => (
+            <div key={book.Id}>
+              <BookCard book={book} />
+            </div>
+          ))}
+        </div>
+      </>
     )
   }
 }
