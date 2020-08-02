@@ -1,6 +1,5 @@
 import React from 'react';
-import BookCard from "./BookCard";
-import AuthorCard from "./AuthorCard";
+import BooksList from './BooksList';
 
 class App extends React.Component {
     render() {
@@ -10,11 +9,7 @@ class App extends React.Component {
                     cf-Book
                 </header>
                 <main style={style.main}>
-                    <BookCard book={this.props.book} />
-                    <AuthorCard book={this.props.book} />
-                    <div>
-                        <button>Подписаться</button>
-                    </div>
+                    <BooksList books={this.props.books} />
                 </main>
                 <footer style={style.footer}>
                     &copy; {new Date().getFullYear()}, X-com
