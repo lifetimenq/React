@@ -42,10 +42,10 @@ class BookCard extends React.Component {
         <div style={styles.cardBody}>
           {
             Subscribers > 20 &&
-            <div>Популярная книга</div>
+            <div><i>Популярная книга!</i></div>
           }
           <div style={styles.title}>{Title}</div>
-          <div>Краткое описание: {Description}</div>
+          <div style={styles.description}>Краткое описание: {Description}</div>
           <div>Количество страниц: {NumbersOfPage}</div>
           <div>Язык: {Language}</div>
           <div>Процент прогресса: {Progress}%</div>
@@ -54,17 +54,19 @@ class BookCard extends React.Component {
           <div>Собранная сумма: {CollectedAmount} руб.</div>
           <div>Ожидаемая сумма: <span>{ExpectedAmount}</span> руб.</div>
         </div>
-        <div>
-        {
-          Authors.length > 3 && 
-          <button onClick={this.toggleAllAuthorsShow}>
-            toggle authors {Authors.length}
-          </button>
-        }
+        <div style={styles.authors}>
         {
           (Authors.length > 3 && !this.state.allAuthorsShow) ?
           <AuthorsList authors={Authors.slice(0, 3)} /> :
           <AuthorsList authors={Authors} />
+        }
+        {
+          Authors.length > 3 && 
+          <div>
+            <button onClick={this.toggleAllAuthorsShow}>
+              toggle authors {Authors.length}
+            </button>
+          </div>
         }
         </div>  
         <div>
@@ -81,23 +83,31 @@ export default BookCard;
 const styles = {
   container: {
     display: 'flex',
-    fontFamily: 'sans-serif'
+    marginBottom: '30px'
   },
   imageBox: {
-    maxWidth: '200px'
+    flexBasis: '300px'
   },
   image: {
     width: '100%'
   },
   cardBody: {
-    flex: '1',
+    flex: '3',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
     padding: '15px 10px'
+  },
+  description: {
+    margin: '20px 0',
+    flexBasis: '100px'
   },
   title: {
     fontWeight: 'bold',
     fontSize: '1.1rem'
+  },
+  authors: {
+    flex: '2',
+    display: 'flex',
+    flexDirection: 'column',
   }
 };

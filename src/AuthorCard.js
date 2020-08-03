@@ -35,10 +35,10 @@ export default AuthorCard;
 const styles = {
     container: {
         display: 'flex',
-        fontFamily: 'sans-serif'
+        alignItems: 'center'
     },
     imageBox: {
-        maxWidth: '200px'
+        maxWidth: '100px'
     },
     image: {
         width: '100%'
@@ -47,7 +47,7 @@ const styles = {
         flex: '1',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        
         padding: '15px 10px'
     },
     title: {

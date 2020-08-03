@@ -16,8 +16,10 @@ class SubscribeModal extends React.Component {
   render() {
     return (
       <>
+      <div style={style.button}>
         <button onClick={() => {
           this.toggle();}}>Информация о подписке</button>
+        </div>
         {
           this.state.isOpen && ReactDOM.createPortal(
             <div style={style.overlay}>
@@ -56,5 +58,10 @@ const style = {
   body: {
     backgroundColor: '#fff',
     padding: '20px'
+  },
+  button: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginBottom: '20px'
   }
 }

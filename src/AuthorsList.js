@@ -5,7 +5,7 @@ import AuthorCard from './AuthorCard';
 class AuthorsList extends React.Component {
   render() {
     return (
-      <div>
+      <div style={style.authorsBody}>
         {
           this.props.authors
           .map(author => (
@@ -20,3 +20,9 @@ class AuthorsList extends React.Component {
 }
 
 export default AuthorsList;
+
+const style = {
+  authorsBody: {
+    padding: '15px 10px'
+  },
+}
