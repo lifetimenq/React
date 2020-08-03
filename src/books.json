@@ -1,0 +1,83 @@
+[
+  {
+    "Id": "1",
+    "Title": "How to earn more than 1 million",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor mi sapien, vel eleifend diam eleifend non. In a libero imperdiet, semper mauris vel, pellentesque purus. Vivamus tincidunt efficitur libero, semper scelerisque magna scelerisque a. Donec vulputate lacinia feugiat. Praesent finibus erat quis urna luctus, eu elementum libero sollicitudin. In at porta lacus. Nullam velit orci, gravida vitae condimentum sed, placerat eget purus. Vivamus vitae fringilla nibh, sit amet sollicitudin est. In quis libero ex. Mauris sollicitudin quam in urna commodo, vel fringilla metus elementum. Vestibulum quis accumsan elit. Maecenas iaculis malesuada placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sagittis orci laoreet, posuere quam quis, eleifend turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    "NumbersOfPage": "97",
+    "Language": "Hebrew",
+    "Progress": "87",
+    "Cover": "https://lh3.googleusercontent.com/pw/ACtC-3eqC3KTkmJ2-9zfBBWCAatafZppUHB_kgmo0IXsKnUgK15AIJ0XVXQJnig976Fm5BqjIgmbGjbsBTRf0cC7fOc5_ioce-cRfdiACI3reMJ4AtFR5bWdtOcOrJbrd-G1FyUJV-TDeUtOBmmiurpIZo7G=w187-h270-no?authuser=0",
+    "MinimumPrice": "199.99",
+    "SuggestedPrice": "299.99",
+    "CollectedAmount": "2599.20",
+    "ExpectedAmount": "10000",
+    "Subscribers": "18",
+    "Authors": [
+      {
+        "Id": "1",
+        "Name": "Albert Einstein",
+        "Email": "Albert.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/qV1COB10emYuj4jmRhGJCkt8utBCnRz1tX0bjpFaB3I_GgM_ziHDgiMQL-3Ygwp_h1DxslHiUctl7F12NYOF-n988_5e-2ktawo8NNyn7Wzt_m3FlwSMJ5kk3dsQJYboxV8bo4ZjnUfgfDvtCMnpvRE9hC-VVCPuBKyVdr1FYP8nWyHQXiArlLppWGxVIZ6YMNs-ibMTC3b10TIMtU0M8VcpnHkp7w0UmYU8iNZ3Wj0hq4hFcLxX6OTBFCrtry9bFmatOoLwOWJmm-6EP7Fu99RLjQQc2FwIl4q032mRkvKCyL2KyaFqe4OeNd2kcYnRRzJ7i8H2u7_YF-hO68Of_UxB8nZ_XrdjwyG3caTkmAnP8VkLCPsBM720RYYqbFgy3JP0af8ASad78z6958M3ISLOlHFuooFB5GiGgZAtIrCk8AE5r6Xm2NpUvv9u1EWFMAluL_GVAZKSQoCdUlXEWRTZp9zetVT8RwO5ScXOSKdR1pFWhccjPckeYe0LmJRwS_1_rY-Fp5wdtTKqoLR2QtaQR4DpDhsTVyMJcXXULBYIG__EcRsMZ1Kg68F4konAzxwuQ68IEQN5eogDzMGqyo9skAFMsroZqxyfLSUvMl4oJrrADvnnp2AdQFQ6VXybAZrvHGDQph3eXF3PIi-visWQuuZ3Ahroq-BJ4deKAr4qwLAIA8DxUiEzCZzJZw=w1200-h630-no?authuser=0",
+        "Info": "Creator of the theory of relativity"
+      },
+      {
+        "Id": "2",
+        "Name": "Max Born",
+        "Email": "Max.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3emoJ8NdEpdHmBiKFXMUSTdDeW1iswNVR4Pa_QxwIQCPpaFGI4PbM0P-B52xd-1q23P6TJ-jHGKnwieImU_XfadbmFQn4_vNp5YV__Q1QbsJ1FXp07Q7ubKJ2RDqC8PDlk2-4A9JnOsHgozPsflVQZz=w274-h353-no?authuser=0",
+        "Info": "German physicist and mathematician who was instrumental in the development of quantum mechanics"
+      },
+      {
+        "Id": "3",
+        "Name": "Erwin Rudolf Josef Alexander Schrodinger",
+        "Email": "Erwin.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3dyptMcwbkHl9aLOWy_MerA2_kXCoF5dxEk24ldXqLgn8a41GZDgMyF56CbqVPT9mHxnWVsDoODJ3F96Wfe-BG1_fP6n0sn8ZQ8PPzopnx6KpZtE3V0p9qg2aQyh2HjJDG8cvcO3S4dF5l6eBcuju83=w183-h275-no?authuser=0",
+        "Info": "Developed a number of fundamental results in quantum theory"
+      },
+      {
+        "Id": "4",
+        "Name": "Werner Karl Heisenberg",
+        "Email": "Werner.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3e8ByJTke6CcGhEH_OjxojOzr8vQRhcmk75pTKr-cH97CVqQh7phVyvJZ71QfnQRa2mYf7upRb4EzZ32s3vQPeJpaiPaZf6gGt7sr-S2LzIVPkJ7nLqbLYO-NKm_jWjw9NCIWwgLD2BW5Me5YgDmD72=w497-h789-no?authuser=0",
+        "Info": "German theoretical physicist and one of the key pioneers of quantum mechanics"
+      },
+      {
+        "Id": "5",
+        "Name": "Max Karl Ernst Ludwig Planck",
+        "Email": "Max.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3fiLTd3yK-nw_kTE233-ZfYm6XYB9J5uRoYeH9vgr_YJJHBsdmIW7hTYAbG_Vl-UhzpAcK6osO6Fy3__m88Rfk7PGK8bOyTWUjyknP2EpUUD2TbBrKc2Poad9kurukYIVlkwrn16kbH7Txz191HVd4n=w318-h159-no?authuser=0",
+        "Info": "Made many contributions to theoretical physics, but his fame as a physicist rests primarily on his role as the originator of quantum theory,[5] which revolutionized human understanding of atomic and subatomic processes"
+      }
+    ]
+  },
+  {
+    "Id": "2",
+    "Title": "Mauris euismod",
+    "Description": "Mauris euismod, nisi vitae convallis fermentum, nulla magna commodo eros, in facilisis metus leo rutrum quam. Vivamus a elementum nunc. Mauris eget nibh ipsum. Etiam tristique est quis lectus mollis rhoncus. In ornare viverra faucibus. Sed tempus pretium cursus. Suspendisse id sollicitudin dui. Sed auctor dolor a elit maximus interdum. Maecenas egestas ante mauris, varius malesuada neque laoreet in. Etiam vestibulum, arcu non auctor maximus, magna diam faucibus diam, vel mollis quam odio sit amet nulla. Morbi accumsan cursus ornare. Sed sagittis ante vitae enim vehicula tristique.",
+    "NumbersOfPage": "97",
+    "Language": "Hebrew",
+    "Progress": "87",
+    "Cover": "https://lh3.googleusercontent.com/pw/ACtC-3dA8M8R0C36IZvhthwZJMdzZ-ZTAkJNOaRMSRQ4jl7u-8tNjiaLUn43rEkRm56FDKX8jJDLE8svAZKXZWVtJmSxVdeLgo_PszgDanTfq2GxAvPUtwiuUQsfmeLshfGYIcZuZmBmZw3qiyxOpsW_vxkS=w314-h499-no?authuser=0",
+    "MinimumPrice": "199.99",
+    "SuggestedPrice": "299.99",
+    "CollectedAmount": "2599.20",
+    "ExpectedAmount": "10000",
+    "Subscribers": "34",
+    "Authors": [
+      {
+        "Id": "4",
+        "Name": "Werner Karl Heisenberg",
+        "Email": "Werner.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3e8ByJTke6CcGhEH_OjxojOzr8vQRhcmk75pTKr-cH97CVqQh7phVyvJZ71QfnQRa2mYf7upRb4EzZ32s3vQPeJpaiPaZf6gGt7sr-S2LzIVPkJ7nLqbLYO-NKm_jWjw9NCIWwgLD2BW5Me5YgDmD72=w497-h789-no?authuser=0",
+        "Info": "German theoretical physicist and one of the key pioneers of quantum mechanics"
+      },
+      {
+        "Id": "5",
+        "Name": "Max Karl Ernst Ludwig Planck",
+        "Email": "Max.tor@example.com",
+        "Avatar": "https://lh3.googleusercontent.com/pw/ACtC-3fiLTd3yK-nw_kTE233-ZfYm6XYB9J5uRoYeH9vgr_YJJHBsdmIW7hTYAbG_Vl-UhzpAcK6osO6Fy3__m88Rfk7PGK8bOyTWUjyknP2EpUUD2TbBrKc2Poad9kurukYIVlkwrn16kbH7Txz191HVd4n=w318-h159-no?authuser=0",
+        "Info": "Made many contributions to theoretical physics, but his fame as a physicist rests primarily on his role as the originator of quantum theory,[5] which revolutionized human understanding of atomic and subatomic processes"
+      }
+    ]
+  }
+]
