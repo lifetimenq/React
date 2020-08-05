@@ -1,33 +1,33 @@
 import React from 'react';
 
 class AuthorCard extends React.Component {
-    render() {
-        if (!this.props.author) {
-            return <div>Empty Author</div>;
-        }
-
-        const {
-            author: {
-                Name,
-                Email,
-                Avatar,
-                Info
-            }
-        } = this.props;
-
-        return (
-            <div style={styles.container}>
-                <div style={styles.imageBox}>
-                    <img style={styles.image} src={Avatar} alt={Name} />
-                </div>
-                <div style={styles.cardBody}>
-                    <div style={styles.title}>{Name}</div>
-                    <div>e-mail: {Email}</div>
-                    <div>Информация об авторе: <span>{Info}</span></div>
-                </div>
-            </div>
-        );
+  render() {
+    if (!this.props.author) {
+      return <div>Empty Author</div>;
     }
+
+    const {
+      author: {
+        Name,
+        Email,
+        Avatar,
+        Info
+      }
+    } = this.props;
+
+    return (
+      <div style={styles.container}>
+        <div style={styles.imageBox}>
+          <img style={styles.image} src={Avatar} alt={Name} />
+        </div>
+        <div style={styles.cardBody}>
+          <div style={styles.title}>{Name}</div>
+          <div>e-mail: {Email}</div>
+          <div>Информация об авторе: <span>{Info}</span></div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AuthorCard;
