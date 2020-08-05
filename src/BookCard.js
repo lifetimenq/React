@@ -1,6 +1,10 @@
 import React from 'react';
 
 import AuthorsList from './AuthorsList';
+import SubscribeButton from './SubscribeButton';
+import FamousBook from './FamousBook';
+import BookImage from './BookImage';
+
 
 class BookCard extends React.Component {
   constructor(props) {
@@ -36,14 +40,9 @@ class BookCard extends React.Component {
 
     return (
       <div style={styles.container}>
-        <div style={styles.imageBox}>
-          <img style={styles.image} src={Cover} alt={Title} />
-        </div>
+        <BookImage cover={Cover} title={Title} />
         <div style={styles.cardBody}>
-          {
-            Subscribers > 20 &&
-            <div><i>Популярная книга!</i></div>
-          }
+          <FamousBook subscribers={Subscribers}>Популярная книга!</FamousBook>
           <div style={styles.title}>{Title}</div>
           <div style={styles.description}>Краткое описание: {Description}</div>
           <div>Количество страниц: {NumbersOfPage}</div>
@@ -69,9 +68,7 @@ class BookCard extends React.Component {
           </div>
         }
         </div>  
-        <div>
-          <button>Подписаться</button>
-        </div>
+        <SubscribeButton>Подписаться</SubscribeButton>
       </div>
     );
   }
