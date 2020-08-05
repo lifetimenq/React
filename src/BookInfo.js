@@ -17,7 +17,6 @@ class BookInfo extends React.Component {
     } = this.props;
     return (
       <>
-        <div>asd</div>
         <div style={styles.title}>{Title}</div>
         <div style={styles.description}>Краткое описание: {Description}</div>
         <div>Количество страниц: {NumbersOfPage}</div>
