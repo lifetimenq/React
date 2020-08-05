@@ -4,6 +4,7 @@ import AuthorsList from './AuthorsList';
 import SubscribeButton from './SubscribeButton';
 import FamousBook from './FamousBook';
 import BookImage from './BookImage';
+import BookInfo from './BookInfo';
 
 
 class BookCard extends React.Component {
@@ -20,38 +21,22 @@ class BookCard extends React.Component {
     if (!this.props.book) {
       return <div>Empty Book</div>;
     }
-
-    const {
+    const { 
       book: {
-        Title,
-        Description,
-        NumbersOfPage,
-        Language,
-        Progress,
         Cover,
-        MinimumPrice,
-        SuggestedPrice,
-        CollectedAmount,
-        ExpectedAmount,
+        Title,
         Subscribers,
         Authors
       }
     } = this.props;
+    const bookInfo = this.props.book;
 
     return (
       <div style={styles.container}>
         <BookImage cover={Cover} title={Title} />
         <div style={styles.cardBody}>
           <FamousBook subscribers={Subscribers}>Популярная книга!</FamousBook>
-          <div style={styles.title}>{Title}</div>
-          <div style={styles.description}>Краткое описание: {Description}</div>
-          <div>Количество страниц: {NumbersOfPage}</div>
-          <div>Язык: {Language}</div>
-          <div>Процент прогресса: {Progress}%</div>
-          <div>Минимальная цена: {MinimumPrice} руб.</div>
-          <div>Желаемая цена: {SuggestedPrice} руб.</div>
-          <div>Собранная сумма: {CollectedAmount} руб.</div>
-          <div>Ожидаемая сумма: <span>{ExpectedAmount}</span> руб.</div>
+          <BookInfo bookInfo={bookInfo} />
         </div>
         <div style={styles.authors}>
         {
@@ -82,25 +67,11 @@ const styles = {
     display: 'flex',
     marginBottom: '30px'
   },
-  imageBox: {
-    flexBasis: '300px'
-  },
-  image: {
-    width: '100%'
-  },
   cardBody: {
     flex: '3',
     display: 'flex',
     flexDirection: 'column',
     padding: '15px 10px'
-  },
-  description: {
-    margin: '20px 0',
-    flexBasis: '100px'
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: '1.1rem'
   },
   authors: {
     flex: '2',
