@@ -1,12 +1,11 @@
 import React from 'react';
 
-import AuthorsList from './AuthorsList';
-import SubscribeButton from './SubscribeButton';
-import BookImage from './BookImage';
-import BookContainer from './BookContainer';
-import AuthorContainer from './AuthorContainer';
+import SubscribeButton from '../Shared/SubscribeButton';
+import BookImage from './Image';
+import BookContainer from './Container';
+import AuthorContainer from '../Authors/Container';
 
-class BookCard extends React.Component {
+class Card extends React.Component {
   render() {
     if (!this.props.book) {
       return <div>Empty Book</div>;
@@ -30,7 +29,7 @@ class BookCard extends React.Component {
   }
 }
 
-export default BookCard;
+export default Card;
 
 
 const styles = {

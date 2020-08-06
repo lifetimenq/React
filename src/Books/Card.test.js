@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import AuthorCard from "./AuthorCard";
+import BookCard from './Card';
 
-test('render author in a card', () => {
+test('render book in a card', () => {
   const book = {
     'Title': 'How to earn more than 1 million',
     'Description': 'Just invent antigravity reactor',
@@ -24,14 +24,14 @@ test('render author in a card', () => {
     'ExpectedAmount': '10000'
   };
 
-  const { getByText } = render(<AuthorCard book={book} />);
+  const { getByText } = render(<BookCard book={book} />);
 
-  expect(getByText('Albert Einstein')).toBeInTheDocument();
-  expect(getByText('Creator of the theory of relativity')).toBeInTheDocument();
+  expect(getByText('How to earn more than 1 million')).toBeInTheDocument();
+  expect(getByText('10000')).toBeInTheDocument();
 });
 
-test('render empty author card', () => {
-  const { getByText } = render(<AuthorCard />);
+test('render empty book card', () => {
+  const { getByText } = render(<BookCard />);
 
-  expect(getByText('Empty Author')).toBeInTheDocument();
+  expect(getByText('Empty Book')).toBeInTheDocument();
 });

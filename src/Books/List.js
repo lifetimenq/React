@@ -1,9 +1,9 @@
 import React from 'react';
 
-import BookCard from './BookCard';
+import BookCard from './Card';
 
 
-class BooksList extends React.Component {
+class List extends React.Component {
   render() {
     return (
       <>
@@ -19,4 +19,4 @@ class BooksList extends React.Component {
   }
 }
 
-export default BooksList;
+export default List;

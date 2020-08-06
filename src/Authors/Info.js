@@ -1,7 +1,7 @@
 import React from 'react';
-import AuthorImage from './AuthorImage';
+import Image from './Image';
 
-class AuthorInfo extends React.Component {
+class Info extends React.Component {
   render() {
     const {
       author: {
@@ -21,7 +21,7 @@ class AuthorInfo extends React.Component {
   }
 }
 
-export default AuthorInfo;
+export default Info;
 
 const styles = {
   cardBody: {

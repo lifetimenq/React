@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AuthorImage extends React.Component {
+class Image extends React.Component {
   render() {
     const Avatar = this.props.avatar;
     const Name = this.props.name;
@@ -13,7 +13,7 @@ class AuthorImage extends React.Component {
   }
 }
 
-export default AuthorImage;
+export default Image;
 
 const styles = {
   imageBox: {

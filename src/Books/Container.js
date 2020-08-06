@@ -1,9 +1,9 @@
 import React from 'react';
 
-import FamousBook from './FamousBook';
-import BookInfo from './BookInfo';
+import Famous from './Famous';
+import Info from './Info';
 
-class BookContainer extends React.Component {
+class Container extends React.Component {
   render () {
     const { 
       book: {
@@ -14,14 +14,14 @@ class BookContainer extends React.Component {
 
     return (
       <div style={styles.cardBody}>
-        <FamousBook subscribers={Subscribers}>Популярная книга!</FamousBook>
-        <BookInfo bookInfo={bookInfo} />
+        <Famous subscribers={Subscribers}>Популярная книга!</Famous>
+        <Info bookInfo={bookInfo} />
       </div>
     )
   }
 }
 
-export default BookContainer;
+export default Container;
 
 const styles = {
   cardBody: {

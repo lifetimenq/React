@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BookInfo extends React.Component {
+class Info extends React.Component {
   render() {
     const {
       bookInfo: {
@@ -31,7 +31,7 @@ class BookInfo extends React.Component {
   }
 }
 
-export default BookInfo;
+export default Info;
 
 const styles = {
   container: {

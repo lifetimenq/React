@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AuthorsList from './AuthorsList';
+import List from './List';
 
-class AuthorContainer extends React.Component {
+class Container extends React.Component {
   constructor(props) {
     super(props);
     this.toggleAllAuthorsShow = this.toggleAllAuthorsShow.bind(this);
@@ -19,8 +19,8 @@ class AuthorContainer extends React.Component {
       <div style={styles.authors}>
         {
           (Authors.length > 3 && !this.state.allAuthorsShow) ?
-          <AuthorsList authors={Authors.slice(0, 3)} /> :
-          <AuthorsList authors={Authors} />
+          <List authors={Authors.slice(0, 3)} /> :
+          <List authors={Authors} />
         }
         {
           Authors.length > 3 && 
@@ -35,7 +35,7 @@ class AuthorContainer extends React.Component {
   }
 }
 
-export default AuthorContainer;
+export default Container;
 
 const styles = {
   authors: {

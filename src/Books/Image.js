@@ -1,18 +1,17 @@
 import React from 'react';
 
-class BookImage extends React.Component {
+class Image extends React.Component {
   render() {
-    const Cover = this.props.cover;
-    const Title = this.props.title;
+    const { cover, title } = this.props;
     return (
       <div style={styles.imageBox}>
-        <img style={styles.image} src={Cover} alt={Title} />
+        <img style={styles.image} src={cover} alt={title} />
       </div>
     )
   }
 }
 
-export default BookImage;
+export default Image;
 
 const styles = {
   imageBox: {

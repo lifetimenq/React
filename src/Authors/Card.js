@@ -1,8 +1,8 @@
 import React from 'react';
-import AuthorImage from './AuthorImage';
-import AuthorInfo from './AuthorInfo';
+import Image from './Image';
+import Info from './Info';
 
-class AuthorCard extends React.Component {
+class Card extends React.Component {
   render() {
     if (!this.props.author) {
       return <div>Empty Author</div>;
@@ -18,14 +18,14 @@ class AuthorCard extends React.Component {
 
     return (
       <div style={styles.container}>
-        <AuthorImage avatar={Avatar} name={Name}/>
-        <AuthorInfo author={author} />
+        <Image avatar={Avatar} name={Name}/>
+        <Info author={author} />
       </div>
     );
   }
 }
 
-export default AuthorCard;
+export default Card;
 
 const styles = {
   container: {
