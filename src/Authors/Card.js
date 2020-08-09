@@ -14,7 +14,7 @@ class Card extends React.Component {
         Avatar,
       }
     } = this.props;
-    const author = this.props;
+    const author = this.props.author;
 
     return (
       <div style={styles.container}>
