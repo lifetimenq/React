@@ -28,7 +28,6 @@ const styles = {
       flex: '1',
       display: 'flex',
       flexDirection: 'column',
-      
       padding: '15px 10px'
   },
   title: {
