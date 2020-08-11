@@ -5,6 +5,7 @@ import Header from './Layout/Header';
 import Footer from './Layout/Footer';
 import Main from './Layout/Main';
 import SubscribeModal from './Shared/SubscribeModal';
+import FeedbackForm from './Shared/FeedbackForm';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Main>
           <SubscribeModal />
           <BooksList books={this.props.books} />
+          <FeedbackForm />
         </Main>
         <Footer>&copy; {new Date().getFullYear()}, X-com</Footer>
       </>
