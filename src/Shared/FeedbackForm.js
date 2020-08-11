@@ -42,6 +42,7 @@ class FeedbackForm extends React.Component {
   }
 
   render() {
+    const { name, email, question } = this.state;
     return (
       <div style={style.formContainer}>
         <form style={style.form} onSubmit={this.handleSubmit}>
@@ -51,20 +52,20 @@ class FeedbackForm extends React.Component {
             <label>Имя</label>
             <input type='text' 
                    style={style.formInput}
-                   value={this.state.name}
+                   value={name}
                    onChange={this.handleNameChange}
             />
             <label>e-mail</label>
             <input type='email' 
                    style={style.formInput}
-                   value={this.state.email}
+                   value={email}
                    onChange={this.handleEmailChange}  
             />
           </div>
           <div>
             <div style={style.formLabelText}><label>Вопрос автору</label></div>
             <textarea style={style.formText}
-                      value={this.state.question}
+                      value={question}
                       onChange={this.handleQuestionChange} 
             />
           </div>
