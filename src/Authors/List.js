@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AuthorCard from './AuthorCard';
+import Card from './Card';
 
-class AuthorsList extends React.Component {
+class List extends React.Component {
   render() {
     return (
       <div style={style.authorsBody}>
@@ -10,7 +10,7 @@ class AuthorsList extends React.Component {
           this.props.authors
           .map(author => (
             <div key={author.Id}>
-              <AuthorCard author={author} />
+              <Card author={author} />
             </div>
           ))
         }
@@ -19,7 +19,7 @@ class AuthorsList extends React.Component {
   }
 }
 
-export default AuthorsList;
+export default List;
 
 const style = {
   authorsBody: {
