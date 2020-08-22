@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BookCard from './Card';
+import Card from './Card';
 
 
 class List extends React.Component {
@@ -9,7 +9,7 @@ class List extends React.Component {
       <div>
         {this.props.books.map(book => (
           <div key={book.Id}>
-            <BookCard book={book} />
+            <Card book={book} />
           </div>
         ))}
       </div>
