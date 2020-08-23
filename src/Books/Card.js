@@ -17,7 +17,7 @@ class Card extends React.Component {
         Authors
       }
     } = this.props;
-    console.log(similar);
+
     return (
       <div>
         <div style={styles.bookContainer}>
@@ -89,7 +89,8 @@ const styles = {
   },
   similarContainer: {
     display: 'flex',
-    marginBottom: '50px'
+    marginBottom: '50px',
+    justifyContent: 'center'
   },
   imageBox: {
     flexBasis: '300px',
