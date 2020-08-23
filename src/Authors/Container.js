@@ -1,7 +1,5 @@
 import React from 'react';
 
-import List from './List';
-
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +35,64 @@ class Container extends React.Component {
 
 export default Container;
 
+const List = ({authors}) => (
+  <div style={styles.authorsBody}>
+    {
+      authors
+      .map(author => (
+        <div key={author.Id}>
+          <Card author={author} />
+        </div>
+      ))
+    }
+  </div>
+);
+
+const Card = ({ author }) => (
+  <div style={styles.container}>
+    <Image author={author}/>
+    <Info author={author} />
+  </div>
+);
+
+const Image = ({author}) => (
+  <div style={styles.imageBox}>
+    <img style={styles.image} src={author.Avatar} alt={author.Name} />
+  </div>
+);
+
+const Info = ({author}) => (
+  <div style={styles.cardBody}>
+    <div style={styles.title}>{author.Name}</div>
+    <div>e-mail: {author.Email}</div>
+    <div>Информация об авторе: <span>{author.Info}</span></div>
+  </div>
+);
+
 const styles = {
+  imageBox: {
+    maxWidth: '100px'
+  },
+  image: {
+      width: '100%'
+  },
+  container: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  cardBody: {
+    flex: '1',
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '15px 10px'
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: '1.1rem'
+  },
+  authorsBody: {
+    padding: '15px 10px'
+  },
   authors: {
     flex: '2',
     display: 'flex',
