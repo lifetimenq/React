@@ -5,6 +5,8 @@ import AuthorContainer from '../Authors/Container';
 import SimilarList from './SimilarList';
 import similar from '../similar.json';
 
+
+
 class Card extends React.Component {
   render() {
     if (!this.props.book) {
