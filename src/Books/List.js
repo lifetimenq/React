@@ -66,9 +66,7 @@ class List extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const { books } = this.state;
-    console.log(books);
     return (
       <div>
         { books ?
