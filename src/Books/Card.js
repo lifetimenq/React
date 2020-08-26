@@ -2,6 +2,8 @@ import React from 'react';
 
 
 import AuthorContainer from '../Authors/Container';
+import SimilarList from './SimilarList';
+import similar from '../similar.json';
 
 class Card extends React.Component {
   render() {
@@ -15,13 +17,20 @@ class Card extends React.Component {
         Authors
       }
     } = this.props;
-    console.log(this.props.book);
+
     return (
-      <div style={styles.container}>
-        <Image book={this.props.book} />
-        <BookContainer book={this.props.book} />
-        <AuthorContainer authors={Authors} />
-        <SubscribeButton>Подписаться</SubscribeButton>
+      <div>
+        <div style={styles.bookContainer}>
+          <Image book={this.props.book} />
+          <BookContainer book={this.props.book} />
+          <AuthorContainer authors={Authors} />
+        </div>
+        <div style={styles.subscribeContainer}>
+          <SubscribeButton>Подписаться</SubscribeButton>
+        </div>
+        <div style={styles.similarContainer}>
+          <SimilarList similar={similar} />
+        </div>
       </div>
     );
   }
@@ -37,8 +46,8 @@ const Image = ({book}) => (
 
 const SubscribeButton = ({children}) => (
   <div>
-    <button>{children}</button>
-</div>
+    <button style={styles.subscribeButton}>{children}</button>
+  </div>
 );
 
 const BookContainer = ({book}) => (
@@ -69,12 +78,23 @@ const Info = ({book}) => (
 );
 
 const styles = {
-  container: {
+  bookContainer: {
     display: 'flex',
     marginBottom: '30px'
   },
+  subscribeContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '30px'
+  },
+  similarContainer: {
+    display: 'flex',
+    marginBottom: '50px',
+    justifyContent: 'center'
+  },
   imageBox: {
-    flexBasis: '300px'
+    flexBasis: '300px',
+    padding: '15px 10px'
   },
   image: {
     width: '100%'
@@ -97,5 +117,9 @@ const styles = {
     flex: '2',
     display: 'flex',
     flexDirection: 'column',
+  },
+  subscribeButton: {
+    fontSize: "1.2rem",
+    padding: "10px 30px"
   }
 };
