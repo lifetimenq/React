@@ -1,3 +1,5 @@
+// не используем этот HOC, вместо него используем hook useBooks
+// оставил, потому что жалко удалять такую красоту
 import React from 'react';
 
 import axios from 'axios';

@@ -6,6 +6,7 @@ import Footer from './Layout/Footer';
 import Main from './Layout/Main';
 import SubscribeModal from './Shared/SubscribeModal';
 import FeedbackForm from './Shared/FeedbackForm';
+import BooksContainer from './Books/Container';
 
 class App extends React.Component {
 
@@ -15,7 +16,7 @@ class App extends React.Component {
         <Header>cf-Book</Header>
         <Main>
           <SubscribeModal />
-          <BooksList />
+          <BooksContainer />
           <FeedbackForm />
         </Main>
         <Footer>&copy; {new Date().getFullYear()}, X-com</Footer>

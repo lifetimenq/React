@@ -2,7 +2,6 @@ import React from 'react';
 
 import Card from './Card';
 import withLoader from '../HOC/withLoader';
-import withBooks from '../HOC/withBooks';
 
 class List extends React.Component {
   
@@ -22,4 +21,4 @@ class List extends React.Component {
   }
 }
 
-export default withBooks(withLoader(List));
+export default withLoader(List);
