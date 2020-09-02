@@ -8,7 +8,7 @@ import './index.css';
 
 import AuthContext from './AuthContext';
 
-const UserInfo = { 
+const userInfo = { 
   email: 'example1@em.com', 
   firstName: 'Анатолий', 
   lastName: 'Вассерман', 
@@ -16,7 +16,7 @@ const UserInfo = {
 };
 
 ReactDom.render(
-  <AuthContext.Provider value={UserInfo}>
+  <AuthContext.Provider value={userInfo}>
     <App />
   </AuthContext.Provider>,
   document.getElementById('root')
