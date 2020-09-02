@@ -4,7 +4,7 @@ import React from 'react';
 import App from "./App";
 
 import './index.css';
-import books from './books.json';
+
 
 import AuthContext from './AuthContext';
 
@@ -17,7 +17,7 @@ const UserInfo = {
 
 ReactDom.render(
   <AuthContext.Provider value={UserInfo}>
-    <App books={books} />
+    <App />
   </AuthContext.Provider>,
   document.getElementById('root')
 );

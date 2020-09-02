@@ -5,6 +5,7 @@ import AuthorContainer from '../Authors/Container';
 import SimilarList from './SimilarList';
 import similar from '../similar.json';
 
+import withLoader from '../HOC/withLoader';
 
 
 class Card extends React.Component {
@@ -38,7 +39,7 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default withLoader(Card);
 
 const Image = ({book}) => (
   <div style={styles.imageBox}>
