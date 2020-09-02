@@ -1,13 +1,9 @@
 import React from 'react';
 
-
 import withLoader from '../HOC/withLoader';
-
-
 
 class List extends React.Component {
   
-
   render() {
     let { authors } = this.props;
     if(authors != null && authors.length > 3 && !this.props.test) {
