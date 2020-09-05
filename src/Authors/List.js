@@ -1,80 +1,29 @@
 import React from 'react';
-import axios from 'axios';
 
-
-const API_TOKEN = 'keyG0c7aAoXmpprjM';
-const httpClient = axios.create({
-  baseURL: 'https://api.airtable.com/v0/appFnjL5yWDtdrvV6',
-  timeout: 1000,
-  headers: {
-    'Authorization' : `Bearer ${API_TOKEN}`
-  }
-});
+import withLoader from '../HOC/withLoader';
 
 class List extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      authors: null
-    }
-  }
-
-  componentDidMount() {
-    this._fetchData(`Authors/`);
-  }
-
-  _mapFromAirtable(data) {
-    return data.records.map(author => ({
-      Id: author.id,
-      Name: author.fields.Name,
-      Email: author.fields.Email ? author.fields.Email : '',
-      Avatar: author.fields.Avatar ? author.fields.Avatar[0].thumbnails.full.url : '',
-      Info: author.fields.Info ? author.fields.Info : '',
-    }));
-  }
   
-  _fetchData(url) {
-    const params = {
-      filterByFormula: `FIND(RECORD_ID(),'${this.props.authors.toString()}')`
-    }
-    httpClient.get(
-      `/${url}`,
-      {
-        params: params
-      }
-    )
-    .then(result => result.data)
-    .then(this._mapFromAirtable)
-    .then(authors => {
-      this.setState({
-        authors
-      })
-    });
-  }
-
   render() {
-    let authors = this.state.authors;
+    let { authors } = this.props;
     if(authors != null && authors.length > 3 && !this.props.test) {
       authors = authors.slice(0, 3);
     }
     return (
     <div style={styles.authorsBody}>
-    { authors ?
-      authors
-      .map(author => (
+    { 
+      authors.map(author => (
         <div key={author.Id}>
           <Card author={author} />
         </div>
-      )):
-      'Загрузка'
+      ))
     }
     </div>
     )
   }
 }
 
-export default List;
+export default withLoader(List);
 
 const Card = React.memo(({ author }) => (
   <div style={styles.container}>

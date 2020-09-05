@@ -1,11 +1,8 @@
 import React from 'react';
 
-
 import AuthorContainer from '../Authors/Container';
 import SimilarList from './SimilarList';
 import similar from '../similar.json';
-
-
 
 class Card extends React.Component {
   render() {
@@ -24,7 +21,7 @@ class Card extends React.Component {
       <div>
         <div style={styles.bookContainer}>
           <Image book={this.props.book} />
-          <BookContainer book={this.props.book} />
+          <BookBlock book={this.props.book} />
           <AuthorContainer authors={Authors} />
         </div>
         <div style={styles.subscribeContainer}>
@@ -52,7 +49,7 @@ const SubscribeButton = ({children}) => (
   </div>
 );
 
-const BookContainer = ({book}) => (
+const BookBlock = ({book}) => (
   <div style={styles.cardBody}>
     { (book.Subscribers > 20) &&
       <Famous>Популярная книга!</Famous>

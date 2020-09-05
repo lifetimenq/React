@@ -4,11 +4,11 @@ import React from 'react';
 import App from "./App";
 
 import './index.css';
-import books from './books.json';
+
 
 import AuthContext from './AuthContext';
 
-const UserInfo = { 
+const userInfo = { 
   email: 'example1@em.com', 
   firstName: 'Анатолий', 
   lastName: 'Вассерман', 
@@ -16,8 +16,8 @@ const UserInfo = {
 };
 
 ReactDom.render(
-  <AuthContext.Provider value={UserInfo}>
-    <App books={books} />
+  <AuthContext.Provider value={userInfo}>
+    <App />
   </AuthContext.Provider>,
   document.getElementById('root')
 );
