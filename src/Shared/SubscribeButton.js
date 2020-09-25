@@ -1,5 +1,4 @@
 import React from 'react';
-import SubscribeModal from './SubscribeModal';
 
 class SubscribeButton extends React.Component {
   render() {
