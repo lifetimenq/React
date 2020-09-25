@@ -1,8 +1,7 @@
 import React from 'react';
 
 import AuthorContainer from '../../Authors/Container';
-import SimilarList from './SimilarList';
-import similar from '../../similar.json';
+import SimilarList from '../SimilarBooks';
 
 import './index.css';
 
@@ -29,21 +28,13 @@ class BookCard extends React.Component {
         <SubscribeButtonBody>
           <SubscribeButton>Подписаться</SubscribeButton>
         </SubscribeButtonBody>
-        <SimilarListBody >
-          <SimilarList similar={similar} />
-        </SimilarListBody>
+        <SimilarList/>
       </Card>
     );
   }
 }
 
 export default BookCard;
-
-const SimilarListBody = ({ children }) => (
-  <div className='similarContainer'>
-    {children}
-  </div>
-);
 
 const SubscribeButtonBody = ({ children }) => (
   <div className='subscribeButtonBody'>
