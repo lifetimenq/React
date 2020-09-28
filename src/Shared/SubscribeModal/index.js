@@ -18,14 +18,14 @@ class SubscribeModal extends React.Component {
   render() {
     return (
       <>
-      <div className='button'>
+      <div className={styles.button}>
         <button onClick={() => {
           this.toggle();}}>Информация о подписке</button>
         </div>
         {
           this.state.isOpen && ReactDOM.createPortal(
-            <div className='overlay'>
-              <div className='body'>
+            <div className={styles.overlay}>
+              <div className={styles.body}>
                 При подписке на книгу, вы получите:
                 <ul>
                   <li>100р Афтограф автора.</li>

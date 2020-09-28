@@ -11,20 +11,20 @@ const AuthorCard = React.memo(({ author }) => (
 export default AuthorCard;
 
 const Card = ({ children }) => (
-  <div className='container'>
+  <div className={styles.container}>
     {children}
   </div>
 );
 
 const Image = ({author}) => (
-  <div className='imageBox'>
-    <img className='image' src={author.Avatar} alt={author.Name} />
+  <div className={styles.imageBox}>
+    <img className={styles.image} src={author.Avatar} alt={author.Name} />
   </div>
 );
 
 const Info = ({author}) => (
-  <div className='cardBody'>
-    <div className='title'>{author.Name}</div>
+  <div className={styles.cardBody}>
+    <div className={styles.title}>{author.Name}</div>
     <div>e-mail: {author.Email}</div>
     <div>Информация об авторе: <span>{author.Info}</span></div>
   </div>

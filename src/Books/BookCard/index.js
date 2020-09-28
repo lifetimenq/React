@@ -37,13 +37,13 @@ class BookCard extends React.Component {
 export default BookCard;
 
 const SubscribeButtonBody = ({ children }) => (
-  <div className='subscribeButtonBody'>
+  <div className={styles.subscribeButtonBody}>
     {children}
   </div>
 );
 
 const CardBody = ({ children }) => (
-  <div className='bookContainer'>
+  <div className={styles.bookContainer}>
     {children}
   </div>
 );
@@ -55,19 +55,19 @@ const Card = ({ children }) => (
 );
 
 const Image = ({book}) => (
-  <div className='imageBox'>
-    <img className='image' src={book.Cover} alt={book.Title} />
+  <div className={styles.imageBox}>
+    <img className={styles.image} src={book.Cover} alt={book.Title} />
   </div>
 );
 
 const SubscribeButton = ({children}) => (
   <div>
-    <button className='subscribeButton'>{children}</button>
+    <button className={styles.subscribeButton}>{children}</button>
   </div>
 );
 
 const BookBlock = ({book}) => (
-  <div className='cardBody'>
+  <div className={styles.cardBody}>
     { (book.Subscribers > 20) &&
       <Famous>Популярная книга!</Famous>
     }
@@ -81,8 +81,8 @@ const Famous = ({children}) => (
 
 const Info = ({book}) => (
   <>
-    <div className='title'>{book.Title}</div>
-    <div className='description'>Краткое описание: {book.Description}</div>
+    <div className={styles.title}>{book.Title}</div>
+    <div className={styles.description}>Краткое описание: {book.Description}</div>
     <div>Количество страниц: {book.NumbersOfPage}</div>
     <div>Язык: {book.Language}</div>
     <div>Процент прогресса: {book.Progress}%</div>

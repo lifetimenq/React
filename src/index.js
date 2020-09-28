@@ -3,8 +3,7 @@ import React from 'react';
 
 import App from "./App";
 
-import style from './main.module.css';
-
+import styles from './main.module.css';
 
 import AuthContext from './AuthContext';
 

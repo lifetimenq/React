@@ -4,7 +4,7 @@ import styles from './Layout.module.css';
 
 class Main extends React.Component {
   render() {
-    return <main className='main'>{this.props.children}</main>
+    return <main className={styles.main}>{this.props.children}</main>
   }
 }
 

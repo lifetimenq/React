@@ -45,34 +45,34 @@ class FeedbackForm extends React.Component {
   render() {
     const { name, email, question } = this.state;
     return (
-      <div className='formContainer'>
-        <form className='form' onSubmit={this.handleSubmit}>
-          <div className='formTitle'><h2>Форма обратной связи</h2></div>
-          <div className='formInputs'>
+      <div className={styles.formContainer}>
+        <form className={styles.form} onSubmit={this.handleSubmit}>
+          <div className={styles.formTitle}><h2>Форма обратной связи</h2></div>
+          <div className={styles.formInputs}>
           <div>
             <label>Имя</label>
             <input type='text' 
-                   className='formInput'
+                   className={styles.formInput}
                    value={name}
                    onChange={this.handleNameChange}
             />
             <label>e-mail</label>
             <input type='email' 
-                   className='formInput'
+                   className={styles.formInput}
                    value={email}
                    onChange={this.handleEmailChange}  
             />
           </div>
           <div>
-            <div className='formLabelText'><label>Вопрос автору</label></div>
-            <textarea className='formText'
+            <div className={styles.formLabelText}><label>Вопрос автору</label></div>
+            <textarea className={styles.formText}
                       value={question}
                       onChange={this.handleQuestionChange} 
             />
           </div>
           </div>
           <div>
-            <button className='formButton'>Отправить</button>
+            <button className={styles.formButton}>Отправить</button>
           </div>
         </form>
       </div>

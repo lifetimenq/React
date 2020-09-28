@@ -6,8 +6,8 @@ import styles from './Layout.module.css';
 class Header extends React.Component {
   render() {
     return (
-      <header className='headerContainer'>
-        <div className='header'>{this.props.children}</div>
+      <header className={styles.headerContainer}>
+        <div className={styles.header}>{this.props.children}</div>
         <UserInfo />
       </header>)
   }

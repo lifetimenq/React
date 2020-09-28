@@ -64,7 +64,7 @@ class Container extends React.Component {
   render() {
     const {authors} = this.state;
     return (
-      <div className='authors'>
+      <div className={styles.authors}>
         <List isLoading={!authors.length} test={this.state.allAuthorsShow} authors={authors} />
         {
           authors.length > 3 && 
