@@ -1,7 +1,7 @@
 import React from 'react';
 import UserInfo from '../Shared/UserInfo';
 
-import './index.css';
+import styles from './Layout.module.css';
 
 class Header extends React.Component {
   render() {

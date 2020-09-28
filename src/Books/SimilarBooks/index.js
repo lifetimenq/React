@@ -1,7 +1,7 @@
 import React from 'react';
 
 import similar from './similar.json';
-import './index.css';
+import styles from './SimilarBooks.module.css';
 
 class SimilarList extends React.Component {
   constructor(props) {

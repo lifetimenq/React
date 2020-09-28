@@ -3,7 +3,7 @@ import List from './List';
 
 import axios from 'axios';
 
-import './index.css';
+import styles from './Authors.module.css';
 
 const API_TOKEN = 'keyG0c7aAoXmpprjM';
 const httpClient = axios.create({

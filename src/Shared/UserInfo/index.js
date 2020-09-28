@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import AuthContext from '../../AuthContext';
 
-import './index.css';
+import styles from './UserInfo.module.css';
 
 const UserInfo = () => {
   const { firstName, lastName, avatarUrl } = useContext(AuthContext);

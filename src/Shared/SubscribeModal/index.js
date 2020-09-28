@@ -2,7 +2,7 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import './index.css';
+import styles from './SubscribeModal.module.css';
 
 class SubscribeModal extends React.Component {
   constructor(props) {

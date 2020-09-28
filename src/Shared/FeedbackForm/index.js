@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.css';
+import styles from './FeedbackForm.module.css';
 
 class FeedbackForm extends React.Component {
   constructor(props) {

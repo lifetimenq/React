@@ -23,7 +23,16 @@ module.exports = {
       },
       {
         test: /\.css/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true
+              }
+            }
+          },
+          'postcss-loader']
       },
       {
         test: /\.json/,

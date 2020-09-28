@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import styles from './AuthorCard.module.css';
 
 const AuthorCard = React.memo(({ author }) => (
   <Card>

@@ -3,7 +3,7 @@ import React from 'react';
 import AuthorContainer from '../../Authors/Container';
 import SimilarList from '../SimilarBooks';
 
-import './index.css';
+import styles from './BookCard.module.css';
 
 class BookCard extends React.Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.css';
+import styles from './Layout.module.css';
 
 class Main extends React.Component {
   render() {
