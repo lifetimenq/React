@@ -3,7 +3,9 @@ module.exports = {
     require('autoprefixer'),
     require('postcss-custom-media')({
       importFrom: {
-        '--phone': '(max-width: 541px)'
+        customMedia: {
+          '--phone': '(max-width: 769px)'
+        }
       }
     })
   ]

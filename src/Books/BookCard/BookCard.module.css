@@ -1,3 +1,9 @@
+@media(--phone) {
+  .bookContainer {
+    flex-direction: column;
+  }
+}
+
 .bookContainer {
   display: flex;
   margin-bottom: 30px;
