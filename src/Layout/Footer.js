@@ -1,16 +1,11 @@
 import React from 'react';
 
+import styles from './Layout.module.css';
+
 class Footer extends React.Component {
   render() {
-    return <footer style={style.footer}>{this.props.children}</footer>
+    return <footer className={styles.footer}>{this.props.children}</footer>
   }
 }
 
 export default Footer;
-
-const style = {
-  footer: {
-      padding: '0 10%',
-      marginTop: '50px'
-  } 
-}

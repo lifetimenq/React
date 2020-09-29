@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from './Card';
+import BookCard from './BookCard';
 import withLoader from '../HOC/withLoader';
 
 class List extends React.Component {
@@ -12,7 +12,7 @@ class List extends React.Component {
         { 
         books.map(book => (
           <div key={book.Id}>
-            <Card book={book} />
+            <BookCard book={book} />
           </div>
         ))
         }

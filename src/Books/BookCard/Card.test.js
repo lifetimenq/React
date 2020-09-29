@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import BookCard from './Card';
+import BookCard from '.';
 
 test('render book in a card', () => {
   const book = {

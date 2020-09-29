@@ -1,15 +1,11 @@
 import React from 'react';
 
+import styles from './Layout.module.css';
+
 class Main extends React.Component {
   render() {
-    return <main style={style.main}>{this.props.children}</main>
+    return <main className={styles.main}>{this.props.children}</main>
   }
 }
 
 export default Main;
-
-const style = {
-  main: {
-      padding: '10px 10%'
-  } 
-}

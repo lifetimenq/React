@@ -1,0 +1,34 @@
+.imageBox {
+  max-width: 100px;
+}
+
+.image {
+    width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.authors {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.authorsBody {
+  padding: 15px 10px;
+}

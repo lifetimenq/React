@@ -23,7 +23,17 @@ module.exports = {
       },
       {
         test: /\.css/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: '[local]--[hash:base64:5]',
+              }
+            }
+          },
+          'postcss-loader']
       },
       {
         test: /\.json/,

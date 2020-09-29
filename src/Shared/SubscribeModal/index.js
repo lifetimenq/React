@@ -2,6 +2,8 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
+import styles from './SubscribeModal.module.css';
+
 class SubscribeModal extends React.Component {
   constructor(props) {
     super(props);
@@ -16,14 +18,14 @@ class SubscribeModal extends React.Component {
   render() {
     return (
       <>
-      <div style={style.button}>
+      <div className={styles.button}>
         <button onClick={() => {
           this.toggle();}}>Информация о подписке</button>
         </div>
         {
           this.state.isOpen && ReactDOM.createPortal(
-            <div style={style.overlay}>
-              <div style={style.body}>
+            <div className={styles.overlay}>
+              <div className={styles.body}>
                 При подписке на книгу, вы получите:
                 <ul>
                   <li>100р Афтограф автора.</li>
@@ -42,26 +44,3 @@ class SubscribeModal extends React.Component {
 }
 
 export default SubscribeModal;
-
-const style = {
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.95)',
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  body: {
-    backgroundColor: '#fff',
-    padding: '20px'
-  },
-  button: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    marginBottom: '20px'
-  }
-}

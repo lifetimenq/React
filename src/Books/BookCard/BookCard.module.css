@@ -1,0 +1,53 @@
+@media(--phone) {
+  .bookContainer {
+    flex-direction: column;
+  }
+}
+
+.bookContainer {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.subscribeButtonBody {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.imageBox {
+  flex-basis: 300px;
+  padding: 15px 10px;
+}
+
+.image {
+  width: 100%;
+}
+
+.cardBody {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+
+.description {
+  margin: 20px 0;
+  flex-basis: 100px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.authors {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribeButton {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+}

@@ -1,14 +1,16 @@
 import React, { useContext } from 'react'
-import AuthContext from '../AuthContext';
+import AuthContext from '../../AuthContext';
+
+import styles from './UserInfo.module.css';
 
 const UserInfo = () => {
   const { firstName, lastName, avatarUrl } = useContext(AuthContext);
   return (
-    <div style={style.userInfoContainer}>
-      <div style={style.imageBox}>
-        <img style={style.image} src={avatarUrl} alt={firstName} />
+    <div className={styles.userInfoContainer}>
+      <div className={styles.imageBox}>
+        <img className={styles.image} src={avatarUrl} alt={firstName} />
       </div>
-      <div style={style.title}>
+      <div className={styles.title}>
         <span>{firstName} {lastName}</span>
       </div>
     </div>

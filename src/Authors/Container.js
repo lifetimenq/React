@@ -3,6 +3,8 @@ import List from './List';
 
 import axios from 'axios';
 
+import styles from './Authors.module.css';
+
 const API_TOKEN = 'keyG0c7aAoXmpprjM';
 const httpClient = axios.create({
   baseURL: 'https://api.airtable.com/v0/appFnjL5yWDtdrvV6',
@@ -62,7 +64,7 @@ class Container extends React.Component {
   render() {
     const {authors} = this.state;
     return (
-      <div style={styles.authors}>
+      <div className={styles.authors}>
         <List isLoading={!authors.length} test={this.state.allAuthorsShow} authors={authors} />
         {
           authors.length > 3 && 
@@ -78,11 +80,3 @@ class Container extends React.Component {
 }
 
 export default Container;
-
-const styles = {
-  authors: {
-    flex: '2',
-    display: 'flex',
-    flexDirection: 'column',
-  }
-};
