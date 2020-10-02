@@ -1,7 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from './Components/Pages/Main';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NotFound from './Components/Pages/NotFound';
 import Book from './Components/Pages/Book';
 
 class App extends React.Component {
@@ -11,7 +12,7 @@ class App extends React.Component {
         <Switch>
           <Route component={Main} path='/' exact />
           <Route component={Book} path='/book/:id' strict exact />
-          <Route render={() => <div>Такой страницы нет</div>}  />
+          <Route component={NotFound}  />
         </Switch>
       </Router>
     );

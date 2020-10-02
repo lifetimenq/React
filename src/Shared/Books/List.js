@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BookCard from '../../../Shared/BookCard';
-import withLoader from '../../../HOC/withLoader';
+import BookCard from '../BookCard';
+import withLoader from '../../HOC/withLoader';
 
 class List extends React.Component {
   

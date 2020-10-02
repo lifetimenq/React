@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AuthorContainer from '../../Components/Pages/Authors/Container';
-import SimilarList from '../../Components/Pages/Books/SimilarBooks';
+import AuthorContainer from '../Authors/Container';
+import SimilarList from '../Books/SimilarBooks';
 
 import styles from './BookCard.module.css';
 

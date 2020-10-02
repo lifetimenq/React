@@ -1,5 +1,5 @@
 import React from 'react';
-import BookContainer from '../Books/Container.js';
+import BookContainer from '../../../Shared/Books/Container.js';
 import Layout from '../../../Layout';
 
 const Main = () => (
