@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AuthorContainer from '../Authors/Container';
 import SimilarList from '../Books/SimilarBooks';
+import { BookPath } from '../../helpers/BookPath';
 
 import styles from './BookCard.module.css';
 
@@ -81,7 +82,7 @@ const Famous = ({children}) => (
 
 const Info = ({book}) => (
   <>
-    <div className={styles.title}><Link to={`/book/${book.Id}`}>{book.Title}</Link></div>
+    <div className={styles.title}><Link to={BookPath(book.Id)}>{book.Title}</Link></div>
     <div className={styles.description}>Краткое описание: {book.Description}</div>
     <div>Количество страниц: {book.NumbersOfPage}</div>
     <div>Язык: {book.Language}</div>

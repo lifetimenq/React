@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Main from './Components/Pages/Main';
 import NotFound from './Components/Pages/NotFound';
 import Book from './Components/Pages/Book';
+import { BookPath } from './helpers/BookPath';
 
 class App extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route component={Main} path='/' exact />
-          <Route component={Book} path='/book/:id' strict exact />
+          <Route component={Book} path={BookPath()} strict exact />
           <Route component={NotFound}  />
         </Switch>
       </Router>
