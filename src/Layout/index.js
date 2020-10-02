@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from './Header.js';
 import Footer from './Footer.js';
-import MainBody from './Main.js';
+import MainBody from './MainBody.js';
 import SubscribeModal from '../Shared/SubscribeModal';
 import FeedbackForm from '../Shared/FeedbackForm';
 

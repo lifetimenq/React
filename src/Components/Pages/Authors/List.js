@@ -1,7 +1,7 @@
 import React from 'react';
 
 import withLoader from '../../../HOC/withLoader';
-import AuthorCard from './AuthorCard';
+import AuthorCard from '../../../Shared/AuthorCard';
 
 class List extends React.Component {
   

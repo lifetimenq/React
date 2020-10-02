@@ -50,6 +50,25 @@ function _fetchData(table) {
   
 }
 
+function _fetchDataById(table, id) {
+
+  const params = {
+    filterByFormula: `RECORD_ID()='${id}'`
+  }
+
+  return (
+    httpClient.get(
+    `/${table}`,
+    {
+      params: params
+    }
+    )
+    .then(result => result.data)
+    .then(_mapFromAirtable)
+  );
+  
+}
+
 const useBooks = () => {
   const [books, setBooks] = useState(null);
 
@@ -64,3 +83,15 @@ const useBooks = () => {
 };
 
 export default useBooks;
+
+
+export const useBook = (bookId) => {
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    _fetchDataById('Books', bookId).then(record => {
+      setBook(record[0]);
+    });
+  }, ['Book']);
+  return book;
+};
