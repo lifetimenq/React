@@ -92,6 +92,6 @@ export const useBook = (bookId) => {
     _fetchDataById('Books', bookId).then(record => {
       setBook(record[0]);
     });
-  }, ['Book']);
+  }, [bookId]);
   return book;
 };
