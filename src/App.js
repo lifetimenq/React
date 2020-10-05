@@ -1,25 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './Layout/Header';
-import Footer from './Layout/Footer';
-import Main from './Layout/Main';
-import SubscribeModal from './Shared/SubscribeModal';
-import FeedbackForm from './Shared/FeedbackForm';
-import BooksContainer from './Books/Container';
+import Main from './Components/Pages/Main';
+import NotFound from './Components/Pages/NotFound';
+import Book from './Components/Pages/Book';
+import { BookPath } from './helpers/BookPath';
 
 class App extends React.Component {
-
   render() {
     return (
-      <>
-        <Header>cf-Book</Header>
-        <Main>
-          <SubscribeModal />
-          <BooksContainer />
-          <FeedbackForm />
-        </Main>
-        <Footer>&copy; {new Date().getFullYear()}, X-com</Footer>
-      </>
+      <Router>
+        <Switch>
+          <Route component={Main} path='/' exact />
+          <Route component={Book} path={BookPath()} strict exact />
+          <Route component={NotFound}  />
+        </Switch>
+      </Router>
     );
   }
 }

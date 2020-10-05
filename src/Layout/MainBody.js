@@ -2,10 +2,10 @@ import React from 'react';
 
 import styles from './Layout.module.css';
 
-class Main extends React.Component {
+class MainBody extends React.Component {
   render() {
     return <main className={styles.main}>{this.props.children}</main>
   }
 }
 
-export default Main;
+export default MainBody;

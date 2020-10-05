@@ -1,0 +1,1 @@
+export const BookPath = (id = ':id') => `/book/${id}`;
