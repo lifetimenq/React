@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Layout from '../../../Layout';
 import BookCard from '../../../Shared/BookCard';
@@ -10,6 +11,9 @@ const Book = ({ match : { params } }) => {
   
   return (
     <Layout>
+      <Helmet>
+        <title>{book ? `cf-Book - ${book.Title}` : `Загрузка...`}</title>
+      </Helmet>
       <BackButton />
       { book ?
         <BookCard book={book} />
