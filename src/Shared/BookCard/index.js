@@ -22,7 +22,7 @@ class BookCard extends React.Component {
     return (
       <Card>
         <CardBody>
-          <Image book={this.props.book} />
+          {this.props.book.Cover && <Image book={this.props.book} />}
           <BookBlock book={this.props.book} />
           <AuthorContainer authors={Authors} />
         </CardBody>

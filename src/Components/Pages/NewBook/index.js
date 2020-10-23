@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 
 import style from './NewBook.module.css';
 import { createBook } from '../../../lib/client';
+import { uploadFile } from '../../../lib/filestack'
 
 import { BookPath } from '../../../helpers/BookPath';
 import { useHistory } from 'react-router-dom';
@@ -21,27 +22,34 @@ const schema = yup.object().shape({
   MinimumPrice: yup.number().positive().required(),
   SuggestedPrice: yup.number().positive().required(),
   ExpectedAmount: yup.number().positive().required(),
-}
-
-);
+});
 
 const NewBook = () => {
   const history = useHistory();
-  const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema)});
+  const { register, handleSubmit, errors, formState: { isSubmitting } } = useForm({ resolver: yupResolver(schema)});
 
-  const onSubmit = (fields) => {
+  const onSubmit = async ({ Cover, ...fields }) => {
+    const formData = new FormData();
+    formData.append('fileUpload', Cover[0]);
+    const uploadResult = await uploadFile(formData);
+
     fields = {
       ...fields,
+      Cover: [
+        {
+          url: uploadResult.url
+        }
+      ],
       Progress: fields.Progress / 100,
       Active: true
     };
 
-    return createBook(fields).then((result) => {
-      const BookId = result.records[0].id;
-      const redirectURI = BookPath(BookId);
+    const result = await createBook(fields);
 
-      history.push(redirectURI);
-    })
+    const BookId = result.records[0].id;
+    const redirectURI = BookPath(BookId);
+
+    history.push(redirectURI);
   };
 
   return (
@@ -57,12 +65,12 @@ const NewBook = () => {
         <Field name='MinimumPrice' label='Минимальная цена' type='number' register={register} errors={errors} />
         <Field name='SuggestedPrice' label='Желаемая цена' type='number' register={register} errors={errors} />
         <Field name='ExpectedAmount' label='Ожидаемая сумма' type='number' register={register} errors={errors} />
-        <Field name='Cover[0].url' label='Обложка' register={register} errors={errors} />
+        <Field name='Cover' label='Загрузка обложки' type='file' register={register} errors={errors} />
         <label className={style.formLabelText}>Автор</label>
         <select className={style.formSelect} name='Authors[0]'  ref={register} errors={errors} >
           <option value='rec75gJHgN3odIiK2'>Werner Karl Heisenberg</option>
         </select>
-        <button className={style.formButton}>Добавить книгу</button>
+        <button disabled={isSubmitting} className={style.formButton}>Добавить книгу</button>
       </form>
       </div>
     </Layout>
