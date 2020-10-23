@@ -5,24 +5,32 @@ import { useForm } from 'react-hook-form';
 
 import style from './NewBook.module.css';
 import { createBook } from '../../../lib/client';
-const NewBook = () => {
 
+import { BookPath } from '../../../helpers/BookPath';
+import { useHistory } from 'react-router-dom';
+
+const NewBook = () => {
+  const history = useHistory();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (fields) => {
     fields = {
       ...fields,
       Active: true
-    }
-    return createBook(fields).then((res) => {
-      console.log(res);
-      return res;
+    };
+
+    return createBook(fields).then((result) => {
+      const BookId = result.records[0].id;
+      const redirectURI = BookPath(BookId);
+
+      history.push(redirectURI);
     })
   };
 
   return (
     <Layout>
-      <h1>Добавление новой книги</h1>
+      <h1 className={style.formContainer}>Добавление новой книги</h1>
+      <div className={style.formContainer}>
       <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
         <Field name='Title' label='Название книги' register={register} />
         <Field name='Description' label='Описание' componentType='textarea' register={register} />
@@ -39,6 +47,7 @@ const NewBook = () => {
         </select>
         <button className={style.formButton}>Добавить книгу</button>
       </form>
+      </div>
     </Layout>
   );
 }
