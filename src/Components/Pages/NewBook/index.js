@@ -1,28 +1,43 @@
 import React from 'react';
 
 import Layout from '../../../Layout';
+import { useForm } from 'react-hook-form';
 
 import style from './NewBook.module.css';
-
+import { createBook } from '../../../lib/client';
 const NewBook = () => {
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (fields) => {
+    fields = {
+      ...fields,
+      Active: true
+    }
+    return createBook(fields).then((res) => {
+      console.log(res);
+      return res;
+    })
+  };
 
   return (
     <Layout>
-      Страница создания книги
-      <form className={style.form}>
-        <Field name='Title' label='Название книги' />
-        <Field name='Description' label='Описание' componentType='textarea' />
-        <Field name='NumbersOfPage' label='Количество страниц' type='number' />
-        <Field name='Progress' label='Прогресс (в %)' type='number' />
-        <Field name='Language' label='Язык' />
-        <Field name='MinimumPrice' label='Минимальная цена' type='number' />
-        <Field name='SuggestedPrice' label='Желаемая цена' type='number' />
-        <Field name='ExpectedAmount' label='Ожидаемая сумма' type='number' />
-        <label>Автор</label>
-        <select name='Author'>
-          <option>Nicola Tesla</option>
+      <h1>Добавление новой книги</h1>
+      <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
+        <Field name='Title' label='Название книги' register={register} />
+        <Field name='Description' label='Описание' componentType='textarea' register={register} />
+        <Field name='NumbersOfPage' label='Количество страниц' register={register} />
+        <Field name='Progress' label='Прогресс (в %)' type='number' register={register} />
+        <Field name='Language' label='Язык' register={register} />
+        <Field name='MinimumPrice' label='Минимальная цена' type='number' register={register} />
+        <Field name='SuggestedPrice' label='Желаемая цена' type='number' register={register} />
+        <Field name='ExpectedAmount' label='Ожидаемая сумма' type='number' register={register} />
+        <Field name='Cover[0].url' label='Обложка' register={register} />
+        <label className={style.formLabelText}>Автор</label>
+        <select className={style.formSelect} name='Authors[0]'  ref={register} >
+          <option value='rec75gJHgN3odIiK2'>Werner Karl Heisenberg</option>
         </select>
-        <button>Добавить книгу</button>
+        <button className={style.formButton}>Добавить книгу</button>
       </form>
     </Layout>
   );
@@ -30,14 +45,14 @@ const NewBook = () => {
 
 export default NewBook;
 
-const Field = ({ componentType, label, ...props }) => {
+const Field = ({ componentType, label, register, ...props }) => {
   const Component = componentType === 'textarea' ? 'textarea' : 'input';
   const formStyle = componentType === 'textarea' ? style.formText : style.formInput;
-  console.log(props);
+
   return (
     <div>
-      <label htmlFor={props.name}>{label}</label>
-      <Component className={formStyle} {...props} />
+      <label className={style.formLabelText} htmlFor={props.name}>{label}</label>
+      <Component ref={register} className={formStyle} {...props} />
     </div>
   );
 }
