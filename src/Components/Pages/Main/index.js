@@ -8,6 +8,7 @@ const Main = () => (
     <Helmet>
       <title>cf-Book</title>
     </Helmet>
+    <h1>CF-Book App</h1>
     <BookContainer />
   </Layout>
 );
