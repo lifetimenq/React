@@ -20,7 +20,7 @@ function _mapFromAirtable(data) {
     NumbersOfPage: book.fields.NumbersOfPage,
     Language: book.fields.Language,
     Progress: book.fields.Progress,
-    Cover: book.fields.Cover[0].thumbnails.full.url,
+    Cover: book.fields.Cover[0].thumbnails && book.fields.Cover[0].thumbnails.full.url,
     MinimumPrice: book.fields.MinimumPrice,
     SuggestedPrice: book.fields.SuggestedPrice,
     CollectedAmount: book.fields.CollectedAmount,
