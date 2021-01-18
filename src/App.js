@@ -5,6 +5,7 @@ import Main from './Components/Pages/Main';
 import NotFound from './Components/Pages/NotFound';
 import Book from './Components/Pages/Book';
 import { BookPath } from './helpers/BookPath';
+import Contacts from './Components/Pages/Contacts';
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <Switch>
           <Route component={Main} path='/' exact />
           <Route component={Book} path={BookPath()} strict exact />
+          <Route component={Contacts} path='/contacts' strict exact />
           <Route component={NotFound}  />
         </Switch>
       </Router>
