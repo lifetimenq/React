@@ -7,6 +7,7 @@ module.exports = {
           '--phone': '(max-width: 769px)'
         }
       }
-    })
+    }),
+    require('cssnano')({ preset: 'default' })
   ]
 }
